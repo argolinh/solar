@@ -1,0 +1,303 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* 1. Estilos gerais*/
+body, html {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    z-index: 1000;
+}
+/* estilos de navegacao */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff9800;
+    transition: width 0.4s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+/* logo lateralizada */
+.inf {
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    /* posicionamento */
+    margin-top: 50px;
+    margin-left: 30px;
+    /* animacao */
+    animation: scaleUp 1.5s ease-out forwards;
+}
+@keyframes scaleUp {
+    from {
+        transform: scale(0.5);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* descricao */
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    width: 15%;
+    margin-top: 9%;
+    padding: 5px;
+    margin-left: 10px;
+    /* animacoes */
+    animation: fadeIn 3s ease-in forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.sobre h3 {
+    padding: 10px;
+    margin-bottom: 3px;
+}
+.sobre p {
+    font-size: 12px;
+}
+/* slides */
+main {
+    display: flex;
+    
+}
+
+.slider {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    width: 80%;
+    height: 90%;
+    border-radius: 30px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    border-radius: 30px;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.current-slide {
+    opacity: 1;
+}
+
+/* botao de login */
+.suporte {
+    width: 55vh;
+    height: 15vh;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    top: 0%;
+    right: 0%;
+    position: absolute;
+    z-index: 100;
+    color: #fff;
+    background-color: #000;
+    border-radius: 0 0 20px 20px;
+    align-items: center;
+    justify-content: center;
+/* animacao */
+    opacity: 0;
+    transform: translateY(-150px);
+    animation: slideInFromTop 2s ease-in-out forwards;
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0);
+        opacity: 1;
+    }
+}
+
+.suporte button {
+    position: absolute;
+    margin-top: 15%;
+    width: 80%;
+    height: 45px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff9800;;
+    border-radius: 10px;
+}
+
+/* clientes */
+.clientes1{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.clientes {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    margin-top: 3%;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    right: 100px;
+    /* animacao */
+    opacity: 0;
+    transform: translate(-150px);
+    animation: slideInFromLeft 2s ease-in-out forwards;
+}
+@keyframes slideInFromLeft {
+    from {
+        transform: translatex( -100%);
+        opacity: 0;
+    }
+    to {
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+.clientes img{
+    width: 100px;
+    border-radius: 50px;
+    padding: 10px;
+}
+.mensagem-clientes {
+    position: absolute;
+    z-index: 1000;
+    width: 20%;
+    margin-top: 10%;
+    margin-left: 73%;
+    align-items: center;
+    background-color: #000;
+    border-radius: 10px;
+    /* animacao */
+    opacity: 0;
+    transform: translate(-150px);
+    animation: slideInFromLeft 2s ease-in-out forwards;
+}
+
+.mensagem-clientes p {
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+}
+/* bem vindo */
+.bem-vindo {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-orientation: mixed;
+    top: 20%;
+    /* animacao */
+    opacity: 0;
+    transform: translate(-150px);
+    animation: slideIn 2s ease-in-out forwards;
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+.bem-vindo p {
+    margin-right: 57%;
+    font-size: 23px;
+}
+.bem-vindo h2 {
+    margin-right: 35%;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+/* dispositivos moveis */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        padding: 10px;
+        font-size: 10px;
+    }
+}

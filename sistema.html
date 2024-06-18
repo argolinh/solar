@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETWORKSOLAR</title>
+    <!-- carregar a folha de estilos (CSS) do Swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> <!-- Font Awesome CSS incos-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/sistema.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <script defer src="js/main.js"></script>
+    <!-- desativar botao direito -->
+<script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+</script>
+</head>
+<body>
+    <main>
+        <aside>
+            <!-- links da bara de navegacao -->
+            <ul class="Links">
+                <li onclick="Navigate(0)" class="activeLink"><i class="fa-solid fa-house"></i>
+                    <p>Home</p>
+                </li>
+                <li onclick="Navigate(1)"><i class="fa-solid fa-user" ></i>
+                    <p>Usuario</p>
+                </li>
+                <li onclick="Navigate(2)"><i class="fa-solid fa-list"></i>
+                    <p>Produção</p>
+                </li>
+                <li onclick="Navigate(3)"><i class="fa-solid fa-images"></i>
+                    <p>Serviços</p>
+                </li>
+                <li onclick="Navigate(4)"><i class="fa-solid fa-comments"></i>
+                    <p>Contato</p>
+                </li>
+            </ul>
+        </aside>
+        <div class="corpo mybody">
+            <div class="SlideContainer swiper-wrapper">
+                <div class="swiper-slide home-slide">
+                    <div class="HomeContent">
+                        <h1>Bem vindo ao sistema de <span class="stylized-name">Energia Solar</span>,</h1>
+                        <h2>da <span class="proffesions">NETWORKSOLAR</span></h2>
+                        <p class="heroline">Utilizando tecnologia avançada e painéis solares de alta qualidade, 
+                    nossos sistemas garantem redução significativa na conta de energia e contribuem para a preservação ambiental.</p>
+                        <div class="buttonGroup"><button> producao em tempo real</button><button>entrar em contato</button></div>
+                    </div>
+                    <div class="SideImg">
+                        <div class="top-right-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                        <img src="img/comercial/Network solar fundo preto.png" alt="">
+                        <div class="bottom-left-corner">
+                            <hr class="hr1">
+                            <hr class="hr2">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="swiper-slide">
+                    <!-- espaco do usuario -->
+                    <div class="usuario-us">
+                    <h1 class="heading">Espaço do Usuario</h1>
+                    <p class="usuario-deatils">
+    A área do cliente no sistema de monitoramento da Network Solar é um portal intuitivo e interativo que oferece uma visão abrangente e detalhada do desempenho do seu sistema solar. Aqui, os clientes podem acompanhar em tempo real a geração de energia, analisar históricos de consumo e produção, e receber notificações personalizadas. Este espaço é projetado para facilitar a gestão energética, promover a sustentabilidade e maximizar a eficiência dos recursos solares.
+                    </p>
+                    <div class="about-me-divison">
+                        <div class="about-me-table">
+                            <ul>
+                            <li><span>Relatorio detalhado</span></li>
+                            <li><span>Notificaçōes e alertas</span></li>
+                            <li><span>Simulador de economia</span></li>
+                            <li><span>Desempenho</span></li>
+                            <li><span>Clima</span></li>
+                            <li><span>Suporte ao cliente</span></li>
+                            <li><span>Consumo de energia</span></li>
+                        </ul>
+                        </div>
+
+                        <div class="skill-bar">
+                            <ul>
+                            <li>
+                                <p>Monitoramento</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:99%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Produção</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:80%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Consumo</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Eficiência</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:50%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <p>Economia</p>
+                                <div class="bar">
+                                    <div class="active-bar" style="width:60%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+                </div></div>
+                <div class="swiper-slide services">
+
+                    <h1 class="heading">Produção</h1>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-clock"></i></div>
+                        <h2>Monitoramento em Tempo Real</h2>
+                        <p>Acompanhe a produçãoem tempo real.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-table"></i></div>
+                        <h2>Histórico de Produção</h2>
+                        <p>Saiba quanto foi produzido nos ultimos meses.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-search"></i></div>
+                        <h2>Histórico de Consumo</h2>
+                        <p>Saiba quanto foi consumido nos ultimos meses.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h2>Eficiência do Sistema</h2>
+                        <p>Acompanhar eficiência.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <h2>Economia Financeira</h2>
+                        <p>caucular economia Financeira.</p>
+                    </div>
+                    <div class="service">
+                        <div class="service-icon"><i class="fa-solid fa-sun"></i></div>
+                        <h2>Redução de Emissões de CO2</h2>
+                            <p>Como a energia solar contribue para o meio ambiente.</p>
+                    </div>
+                </div>
+                <div class="swiper-slide gallery">
+                    <h1 class="heading"> Nossos Serviços</h1>
+                    <div class="project"><img src="img/comercial/Artes redes sociais/01.jpg" alt=""></div>
+                    <div class="project"><img src="img/comercial/Artes redes sociais/02.jpg" alt=""></div>
+                    <div class="project"><img src="img/comercial/Artes redes sociais/03.jpg" alt=""></div>
+                    <div class="project"><img src="img/comercial/Artes redes sociais/04.jpg" alt=""></div>
+                    <div class="project"><img src="img/comercial/Artes redes sociais/05.jpg" alt=""></div>
+                    <div class="project"><img src="img/comercial/Artes redes sociais/06.jpg" alt=""></div>
+                </div>
+                <div class="swiper-slide contactMe">
+                    <h1 class="heading">Contato</h1>
+                    <div class="contactinfo"><i class="fa-solid fa-phone"></i>
+                        <h3>Whatsapp</h3>
+                        <p>123-456-7890</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-location-dot"></i>
+                        <h3>Escritorio</h3>
+                        <p>Brasil</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-regular fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>abc123@gmail.com</p>
+                    </div>
+                    <div class="contactinfo"><i class="fa-solid fa-globe"></i>
+                        <h3>Website</h3>
+                        <p>www.abc123.com</p>
+                    </div>
+                    <form>
+                        <h2>Contato no email: <div class="SocialLinks">
+                                <i class="fa-brands fa-instagram"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                                <i class="fa-brands fa-facebook"></i>
+                            </div>
+                        </h2>
+                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="email">
+                        <textarea rows="10" placeholder="Escreva sua mensagem para a NetworkSolar aqui..."></textarea>
+                        <button class="primary">Enviar</button>
+
+                    </form>
+                    <footer>
+                        <li>Desenvolvido pela: © SOSConnect 2023 .</li>
+                    </footer>
+                </div>
+            </div>
+    </main>
+    
+</body>
+</html>

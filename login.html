@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login NetworkSolar</title>
+    <link rel="stylesheet" href="css/Login.css">
+</head>
+<body>
+   
+    <section>
+        <form action="login">
+            <h1>seja bem vindo a NetworkSolar <hr></h1>
+        <h2>Acesso</h2>
+        <div>
+            <label for="Username">Usuario</label>
+            <input type="text">
+        </div>
+        <div>
+        <label for="Password">Password</label>
+        <input type="password">
+        </div>
+        <button type="button" onclick="login()">Acessar</button>
+        <div id="googleSignIn"></div>
+    </form>
+    </section>
+  
+    <script>
+        // Função para iniciar o login com Google
+        function startGoogleLogin() {
+            const redirectUri = 'URL_DE_RETORNO_DO_GOOGLE'; // Defina a URL para redirecionamento após o login
+            const clientId = 'SEU_CLIENT_ID_DO_GOOGLE'; // Seu Client ID do Google OAuth2
+            
+            const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&client_id=${clientId}&scope=email profile`;
+
+            window.location.href = authUrl;
+        }
+
+        // Função para realizar o login no seu sistema
+        function login() {
+            // Aqui você pode implementar a lógica de login com usuário e senha
+            // Por exemplo, validar os campos de usuário e senha
+            
+            // Exemplo básico de validação
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Aqui você pode implementar sua lógica de validação
+            
+            // Exemplo básico: redirecionar para página após validação
+            if (username === 'admin' && password === 'admin') {
+                window.location.href = 'sistema.html';
+            } else {
+                alert('U
+
+        // Função para iniciar o login com Google
+        function startGoogleLogin() {
+            const redirectUri = 'URL_DE_RETORNO_DO_GOOGLE'; // Defina a URL para redirecionamento após o login
+            const clientId = 'SEU_CLIENT_ID_DO_GOOGLE'; // Seu Client ID do Google OAuth2
+            
+            const authUrl = `https://accounts.google.com/o/oauth2/auth?response_type=code&redirect_uri=${encodeURIComponent(redirectUri)}&client_id=${clientId}&scope=email profile`;
+
+            window.location.href = authUrl;
+        }
+
+        // Função para realizar o login no seu sistema
+        function login() {
+            // Aqui você pode implementar a lógica de login com usuário e senha
+            // Por exemplo, validar os campos de usuário e senha
+            
+            // Exemplo básico de validação
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Aqui você pode implementar sua lógica de validação
+            
+            // Exemplo básico: redirecionar para página após validação
+            if (username === 'admin' && password === 'admin') {
+                window.location.href = 'sistema.html';
+            } else {
+                alert('Usuário ou senha incorretos.');
+            }
+        }
+
+        // Adicionar botão de login do Google
+        window.onload = function() {
+            const googleSignInButton = document.createElement('button');
+            googleSignInButton.textContent = 'Entrar com Google';
+            googleSignInButton.onclick = startGoogleLogin;
+            document.getElementById('googleSignIn').appendChild(googleSignInButton);
+        };
+    </script>
+</body>
+</html>
