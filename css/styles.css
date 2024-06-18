@@ -180,7 +180,8 @@ main {
 
 .suporte button {
     position: absolute;
-    margin-top: 15%;
+    margin-top: 5%;
+    left: 0;
     width: 80%;
     height: 45px;
     text-transform: uppercase;
@@ -188,6 +189,7 @@ main {
     background-color: #ff9800;;
     border-radius: 10px;
 }
+
 
 /* clientes */
 .clientes1{
